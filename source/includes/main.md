@@ -19,3 +19,9 @@ The following libraries are community contributed and not officially supported. 
 
 - [Node.js and Browser library - yovanoc](https://github.com/yovanoc/mailsac)
 - [Web socket example in Node.js - ruffrey](https://github.com/ruffrey/mailsac-node-websocket-example)
+
+# Edit this Page
+
+Contribute documentation and fixes here:
+
+https://github.com/mailsac/api-docs
