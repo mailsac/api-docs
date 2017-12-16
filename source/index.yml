@@ -1,0 +1,27 @@
+title: Mailsac API Guide
+
+# language_tabs:
+  # - bash
+  # - ruby
+  # - python
+  # - javascript
+
+toc_footers:
+  - <a href="/register" target="_blank">Sign Up for a Free Account</a>
+  - <a href="/subscription" target="_blank">Buy a Developer Key</a>
+
+includes:
+  - main
+  - _auth
+  - _addresses
+  - _messages
+  - _account
+  - _attachments
+  - _mailstats
+  - _webhooks
+  - _websockets
+  - _errors
+
+search: true
+
+highlight_theme: monokai
