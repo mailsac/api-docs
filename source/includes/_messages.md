@@ -26,7 +26,7 @@ messages from public inboxes.
     "inbox": "test@example.com",
     "domain": "example.com",
     "received": "2016-08-16T02:59:13.406Z",
-    "size": "6821",
+    "size": 6821,
     "attachments": ["def20078c72e1e72043e910734e5efbc"],
     "ip": "195.3.2.7",
     "via": "8.55.32.199",
@@ -34,7 +34,8 @@ messages from public inboxes.
     "labels": ["Events"],
     "read": false,
     "rtls": true,
-    "links": ["https://google.com"]
+    "links": ["https://google.com"],
+    "spam": 0.001019620767513069
 }
 ```
 
@@ -60,6 +61,7 @@ labels | array of strings - custom inbox labels
 read | read status - true=read, false=unread
 rtls | received over TLS (encrypted)
 links | list of any URLs that were found in the message contents
+spam | result of a spam filter scan, between 0.0 and 1.0, where 1.0 indicates high likelihood of being spam
 
 
 ## Example Recipient Object
@@ -144,7 +146,7 @@ Get a list of messages that have been saved and made private for the user.
     "inbox": "test@example.com",
     "domain": "example.com",
     "received": "2016-08-16T02:59:13.406Z",
-    "size": "6821",
+    "size": 6821,
     "attachments": ["def20078c72e1e72043e910734e5efbc"],
     "ip": "195.3.2.7",
     "via": "8.55.32.199",
@@ -152,7 +154,8 @@ Get a list of messages that have been saved and made private for the user.
     "labels": ["Events"],
     "read": false,
     "rtls": true,
-    "links": ["https://google.com"]
+    "links": ["https://google.com"],
+    "spam": 0.001019620767513069
 }
 ```
 
@@ -207,7 +210,8 @@ Field | Description
       "received": "2016-10-10T16:58:59.131Z",
       "originalInbox": "test@example.com",
       "size": 115313,
-      "attachments": null
+      "attachments": null,
+      "spam": 0.001019620767513069
     }]
 }
 ```
@@ -227,7 +231,7 @@ since | date / datetime - only fetch messages since this date or time
 ## Search Private Messages
 ### GET /api/inbox-search
 
-```
+```json
 {
     "query": "",
     "messages": [{
@@ -262,7 +266,8 @@ since | date / datetime - only fetch messages since this date or time
       "received": "2016-10-10T16:58:59.131Z",
       "originalInbox": "test@example.com",
       "size": 115313,
-      "attachments": null
+      "attachments": null,
+      "spam": 0.001019620767513069
     }]
 }
 ```
@@ -392,7 +397,7 @@ Permanently removes a message. There is no history or trash bin.
 ```json
 {
     "dkim-signature": "",
-    "received": "",
+    "received": ["", ""],
     "x-facebook": "",
     "date": "",
     "to": "",
