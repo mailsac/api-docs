@@ -10,4 +10,4 @@ Instructions for running a Node Slate project are below.
 
 -----------
 
-[Read the Original Slate README and license](README-SLATE)
+[Read the Original Slate README and license](README-SLATE.md)
