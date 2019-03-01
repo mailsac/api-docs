@@ -28,14 +28,13 @@ Listen for Mailsac emails via websocket in this tiny Node.js example app.
 
 ```bash
 # Example Web Socket Connection URL
-wss://sock.mailsac.com/incoming-messages?_id=myusername;&amp;key=skkie9bksd2ad&amp;addresses=1@mailsac.com,2@mailsac.com
+wss://sock.mailsac.com/incoming-messages?key=skkie9bksd2ad&amp;addresses=1@mailsac.com,2@mailsac.com
 ```
 
 The web socket endpoint is `wss://sock.mailsac.com/incoming-messages`
 
 ### Query String Parameters
 
-- `_id` - Your account username (aka _id).
 - `key` - Your account's API key.
 - `addresses` - A comma separated list of addresses you wish to listen for messages on.
 These must be private addresses that your account owns.
