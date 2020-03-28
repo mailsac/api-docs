@@ -111,7 +111,6 @@ Limited to non-private inboxes.
         ],
         "subject": "Stuff",
         "received": "2017-04-23T05:49:29.297Z",
-        "originalInbox": "xh@mailsac.com",
         "attachments": [
             "06f33e07967f624c57445666b9efb1a9",
             "666b9ef33066967f24c57445e07fb1a0"
@@ -127,7 +126,6 @@ Limited to non-private inboxes.
         ],
         "subject": "Chicken sandwich",
         "received": "2017-04-26T05:42:29.444Z",
-        "originalInbox": "joe@example.com",
         "attachments": [
             "06f33e07967f624c57445666b9efb1a9"
         ]
