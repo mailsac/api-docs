@@ -22,7 +22,6 @@ messages from public inboxes.
     "bcc": [Recipient],
     "subject": "hi bobby",
     "savedBy": "bob",
-    "originalInbox": "test@example.com",
     "inbox": "test@example.com",
     "domain": "example.com",
     "received": "2016-08-16T02:59:13.406Z",
@@ -48,7 +47,6 @@ cc    | array of `Recipient` objects (see below)
 bcc   | array of `Recipient` objects (see below)
 subject | email subject line
 savedBy | when starred, this is the `Account._id`
-originalInbox | same as inbox unless sent to the encryptedInbox
 inbox | email address to which this message belongs
 domain | hostname domain for the inbox
 received | ISO 8601 date and time string
@@ -96,7 +94,6 @@ address | email address
   }],
   "subject": "Page 2",
   "received": "2014-10-02T09:05:51.484Z",
-  "originalInbox": "test@example.com",
   "size": 6210,
   "attachments": ["1e72043e910def20078c72e734e5efbc"]
 }, {
@@ -113,7 +110,6 @@ address | email address
   }],
   "subject": "Weeping",
   "received": "2016-10-10T16:58:59.131Z",
-  "originalInbox": "test@example.com",
   "size": 115313,
   "attachments": null
 }]
@@ -142,7 +138,6 @@ Get a list of messages that have been saved and made private for the user.
     "bcc": [Recipient],
     "subject": "hi bobby",
     "savedBy": "bob",
-    "originalInbox": "test@example.com",
     "inbox": "test@example.com",
     "domain": "example.com",
     "received": "2016-08-16T02:59:13.406Z",
@@ -191,7 +186,6 @@ Field | Description
       }],
       "subject": "Page 2",
       "received": "2014-10-02T09:05:51.484Z",
-      "originalInbox": "test@example.com",
       "size": 6210,
       "attachments": ["1e72043e910def20078c72e734e5efbc"]
     }, {
@@ -208,7 +202,6 @@ Field | Description
       }],
       "subject": "Weeping",
       "received": "2016-10-10T16:58:59.131Z",
-      "originalInbox": "test@example.com",
       "size": 115313,
       "attachments": null,
       "spam": 0.001019620767513069
@@ -247,7 +240,6 @@ since | date / datetime - only fetch messages since this date or time
       }],
       "subject": "Page 2",
       "received": "2014-10-02T09:05:51.484Z",
-      "originalInbox": "test@example.com",
       "size": 6210,
       "attachments": ["1e72043e910def20078c72e734e5efbc"]
     }, {
@@ -264,7 +256,6 @@ since | date / datetime - only fetch messages since this date or time
       }],
       "subject": "Weeping",
       "received": "2016-10-10T16:58:59.131Z",
-      "originalInbox": "test@example.com",
       "size": 115313,
       "attachments": null,
       "spam": 0.001019620767513069
@@ -296,7 +287,6 @@ and `subject`.
     }],
     "subject": "Saved",
     "received": "2017-01-10T16:58:59.131Z",
-    "originalInbox": "test@example.com",
     "size": 115313,
     "attachments": null
 }
