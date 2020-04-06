@@ -7,8 +7,7 @@ title: Mailsac API Guide
   # - javascript
 
 toc_footers:
-  - <a href="/register" target="_blank">Sign Up for a Free Account</a>
-  - <a href="/subscription" target="_blank">Buy a Developer Key</a>
+  - <a href="/register" target="_blank">Sign Up for a free account and API key</a>
 
 includes:
   - main
