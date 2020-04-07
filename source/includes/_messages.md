@@ -23,6 +23,7 @@ messages from public inboxes.
     "subject": "hi bobby",
     "savedBy": "bob",
     "inbox": "test@example.com",
+    "originalInbox": "test@example.com",
     "domain": "example.com",
     "received": "2016-08-16T02:59:13.406Z",
     "size": 6821,
@@ -48,6 +49,7 @@ bcc   | array of `Recipient` objects (see below)
 subject | email subject line
 savedBy | when starred, this is the `Account._id`
 inbox | email address to which this message belongs
+originalInbox | email address which originally received the message. This will only be different if the message was forwarded, or rerouted to a catch-all inbox.
 domain | hostname domain for the inbox
 received | ISO 8601 date and time string
 size | content length in bytes of the original raw email message
@@ -139,6 +141,7 @@ Get a list of messages that have been saved and made private for the user.
     "subject": "hi bobby",
     "savedBy": "bob",
     "inbox": "test@example.com",
+    "originalInbox": "test@example.com",
     "domain": "example.com",
     "received": "2016-08-16T02:59:13.406Z",
     "size": 6821,
@@ -190,6 +193,7 @@ Field | Description
       "attachments": ["1e72043e910def20078c72e734e5efbc"]
     }, {
       "inbox": "test@example.com",
+      "originalInbox": "test@example.com",
       "to": [{
         "address": "test@example.com",
         "name": ""
@@ -276,6 +280,7 @@ and `subject`.
 {
     "savedBy": "bob",
     "inbox": "test@example.com",
+    "originalInbox": "test@example.com",
     "to": [{
         "address": "test@example.com",
         "name": ""
