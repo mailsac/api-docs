@@ -124,6 +124,12 @@ Returns 401 if owned by other user.
 
 Returns 400 if it is not owned.
 
+### Query Params
+
+Field | Description
+------|------------
+deleteAddressMessages| true - Delete all messages associated with private address
+
 ## Forward an Email Address
 ### `PUT /api/private-address-forwarding/:email`
 
