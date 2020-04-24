@@ -53,7 +53,7 @@ originalInbox | email address which originally received the message. This will o
 domain | hostname domain for the inbox
 received | ISO 8601 date and time string
 size | content length in bytes of the original raw email message
-attachments | `null` or array of MD5 hashes of attachments
+attachments | `null` or array of MD5 hashes of attachments. Use the [Attachments API](#attachments-api) to get a message's attachments.
 ip | remote SMTP server that sent the mail to the server at `via`
 via | IP address of SMTP server that received the message from `ip`
 folder | inbox folder, one of: inbox, all, sent, spam, trash, drafts
