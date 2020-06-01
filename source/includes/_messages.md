@@ -304,16 +304,12 @@ There is no PUT body.
 It returns only the message metadata.
 
 
-## Set Labels on a Message
-### `PUT /api/addresses/:email/messages/:messageId/labels`
+## Add Label to a Message
+### `PUT /api/addresses/:email/messages/:messageId/labels/:label`
 
 > PUT Body
 
-```json
-{
-    "labels": ["Finance", "Taxes 2017"]
-}
-```
+No body
 
 > Response Body
 
@@ -324,11 +320,34 @@ It returns only the message metadata.
 }
 ```
 
-Set labels on a message.
+To help organize messages and group messages together, add a label
+to a message. When successful, returns 200 with a subset of the message object.
 
-Any existing labels will be replaced with the new array of string labels.
+When the label already exists on the message, the message is not modified
+and the API endpoint returns 200.
 
-Maximum 3 labels per message.
+## Remove a Label from a Message
+### `DELETE /api/addresses/:email/messages/:messageId/labels/:label`
+
+> DELETE Body
+
+No body
+
+> Response Body
+
+```json
+{
+    "_id": "C9vJkYBIIrmPruWhyhTZJXOavUSsCSHL",
+    "labels": ["Finance", "Taxes 2017"]
+}
+```
+
+Removes a label from a message. Returns 200 with a subset of the message object
+when successful.
+
+When the label did not exists on the message, the message is not modified
+and the API endpoint returns 200.
+
 
 ## Move Message to a Folder
 ### `PUT /api/addresses/:email/messages/:messageId/folder/:folder`
