@@ -5,6 +5,25 @@ outbound mail, and inbound mail.
 
 ## Validate Email Address Integrity
 ### `GET /api/validations/addresses/:addressToValidate`
+> Example Request
+
+```bash
+GET /api/validations/addresses/greg@reconmail.com
+```
+> Example Response
+
+```json
+{
+    "email": "greg@reconmail.com",
+    "validFormat": true,
+    "local": "greg",
+    "domain": "reconmail.com",
+    "isDisposable": true,
+    "disposableDomains": ["mailinator.com"],
+    "aliases": ["23.239.11.30", "mailinator.com"]
+}
+```
+
 ### `POST /api/validations/addresses`
 
 > Example Request
@@ -45,12 +64,9 @@ associated with.
 There are two routes for validating email addresses.
 
 The GET route is for quickly testing in a web browser, or for testing
-one email address at a time.
+one email address at a time. The GET route will return a JSON object.
 
-The POST route accepts an array of up to 50 email addresses.
-
-**Both** routes return an array, but in the case of the GET route,
-there will be only one result.
+The POST route accepts an array of up to 50 email addresses and will return an array.
 
 ### POST Body
 
