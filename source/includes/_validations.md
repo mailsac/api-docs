@@ -58,7 +58,7 @@ POST /api/validations/addresses
 ```
 
 Determine whether an email address is a valid format, whether it
-is a diposable address, and the domains or IP addresses it is
+is a disposable address, and the domains or IP addresses it is
 associated with.
 
 There are two routes for validating email addresses.
