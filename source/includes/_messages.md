@@ -399,11 +399,47 @@ Change the read state of a message. No PUT body is needed.
 Pass `readBoolean` as `true` to mark the message as read, and `false` to mark it
 as unread. The default is `false` - unread.
 
+## Delete All Inbox Messages
+### `DELETE /api/addresses/:email/messages`
+
+Permanently deletes ("purge") all messages for the `:email` address.
+
+This feature is only available for private addresses or custom domains.
+
+This API route will _not_ delete starred (`savedBy`) messages. Starred
+messages must be deleted or unstarred before purging the inbox.
+
+There is no history or trash bin.
+
+Returns status code `204` when successful.
+
+> Example Request
+
+```bash
+DELETE /api/addresses/donkey@biscuits.org/messages
+```
+
+> Example Response
+
+```plaintext
+204 No Content
+```
+
 
 ## Delete a Message
 ### `DELETE /api/addresses/:email/messages/:messageId`
 
 Permanently removes a message. There is no history or trash bin.
+
+Returns status code `200` when successful.
+
+```json
+{
+  "message": "Message was deleted.",
+  "_id": "P9mwzOJ7c2xaBA5HHw-0",
+  "inbox": "donkey@biscuits.org"
+}
+```
 
 ## Get Message Headers
 ### `GET /api/headers/:email/:messageId`
