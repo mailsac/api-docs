@@ -442,8 +442,8 @@ Returns status code `200` when successful.
 ```
 
 ## Get Message Headers
-### `GET /api/addresses/:email/:messageId/headers`
-### `GET /api/addresses/:email/:messageId/headers?format=value`
+### `GET /api/addresses/:email/messages/:messageId/headers`
+### `GET /api/addresses/:email/messages/:messageId/headers?format=value`
 
 ### Query Params
 
