@@ -442,37 +442,113 @@ Returns status code `200` when successful.
 ```
 
 ## Get Message Headers
-### `GET /api/headers/:email/:messageId`
+### `GET /api/addresses/:email/:messageId/headers`
+### `GET /api/addresses/:email/:messageId/headers?format=value`
+
+### Query Params
+
+If no querystring parameter is provided the default format will be `json`
+
+Querystring Param | Value | Description
+------|------------
+format | json | message headers are returned as json with header values grouped
+format | json-ordered | message headers are returned as JSON maintaining their original order
+format | plain | message headers are returned as text/plain
+
+> Example `?format=json` response
 
 ```json
 {
-    "dkim-signature": "",
+    "dkim-signature": [""],
     "received": ["", ""],
-    "x-facebook": "",
-    "date": "",
-    "to": "",
-    "subject": "",
-    "x-priority": "",
-    "x-mailer": "",
-    "return-path": "",
-    "from": "",
-    "reply-to": "",
-    "errors-to": "",
-    "x-facebook-notify": "",
-    "list-unsubscribe": "",
-    "x-facebook-priority": "",
-    "x-auto-response-suppress": "",
-    "require-recipient-valid-since": "",
-    "message-id": "",
-    "mime-version": "",
-    "content-type": "",
+    "x-facebook": [""],
+    "date": [""],
+    "to": [""],
+    "subject": [""],
+    "x-priority": [""],
+    "x-mailer": [""],
+    "return-path": [""],
+    "from": [""],
+    "reply-to": [""],
+    "errors-to": [""],
+    "x-facebook-notify": [""],
+    "list-unsubscribe": [""],
+    "x-facebook-priority": [""],
+    "x-auto-response-suppress": [""],
+    "require-recipient-valid-since": [""],
+    "message-id": [""],
+    "mime-version": [""],
+    "content-type": [""],
     "received": ["", ""],
-    "x-mailsac-whitelist": ""
+    "x-mailsac-whitelist": [""]
 }
 ```
-Get the SMTP headers from an email message.
 
-Use the querystring param `?download=1` to trigger file download in browser.
+> Example `?format=json-ordered` response
+
+```json
+[
+  {
+    "name": "received",
+    "value": ""
+  },
+  {
+    "name": "received",
+    "value": ""
+  },
+  {
+    "name": "x-mailsac-whitelist",
+    "value": ""
+  },
+  {
+    "name": "dkim-signature",
+    "value": ""
+  },
+  {
+    "name": "to",
+    "value": ""
+  },
+  {
+    "name": "subject",
+    "value": ""
+  },
+  {
+    "name": "message-id",
+    "value": ""
+  },
+  {
+    "name": "list-unsubscribe",
+    "value": ""
+  },
+  {
+    "name": "date",
+    "value": ""
+  },
+  {
+    "name": "mime-version",
+    "value": ""
+  }
+]
+```
+
+> Example `?format=plain` response
+
+```plaintext
+Received: ""
+Received: ""
+X-Mailsac-Whitelist: ""
+DKIM-Signature: ""
+Content-Type: ""
+Received: ""
+Received: ""
+From: ""
+To: ""
+Subject: ""
+Message-ID: ""
+List-Unsubscribe: ""
+Date: ""
+MIME-Version: ""
+```
 
 ## Get Sanitized HTML
 ### `GET /api/body/:email/:messageId`
