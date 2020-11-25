@@ -1,3 +1,10 @@
+Mailsac's API documentation is now generated dynamically from https://mailsac.com/openapi.json
+
+This repository is now archived and out of date.
+
+
+---------------------------
+
 # Mailsac API Documentation
 
 This repository contains the documentation for Mailsac's public API at [mailsac.com/docs/api](https://mailsac.com/docs/api).
